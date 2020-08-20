@@ -84,7 +84,7 @@ public class Updater {
 
     public void startScheduler() {
         System.out.println("Starting Update-Scheduler");
-        scheduler.scheduleWithFixedDelay(updateFunc, 0, 10, TimeUnit.MINUTES);
+        scheduler.scheduleWithFixedDelay(updateFunc, 0, 6, TimeUnit.HOURS);
     }
 
     public void stopScheduler() {

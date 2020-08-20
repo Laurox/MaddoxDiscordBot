@@ -65,10 +65,10 @@ public class MaddoxBot {
         logger = new Logger();
 
         Updater updater = new Updater();
-        // updater.startScheduler();
+        updater.startScheduler();
 
         LeaderboardSchedule leaderboard = new LeaderboardSchedule();
-        // leaderboard.startScheduler();
+        leaderboard.startScheduler();
     }
 
     public static void setTOKEN(String TOKEN) {

@@ -24,6 +24,6 @@ public class LeaderboardSchedule {
 
     public void startScheduler() {
         System.out.println("Starting Leaderboard-Scheduler");
-        scheduler.scheduleWithFixedDelay(leaderboardFunc, 0, 1, TimeUnit.HOURS);
+        scheduler.scheduleWithFixedDelay(leaderboardFunc, 0, 6, TimeUnit.HOURS);
     }
 }
