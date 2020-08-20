@@ -21,7 +21,7 @@ import javax.security.auth.login.LoginException;
 
 public class MaddoxBot {
 
-    private static final String TOKEN = "NzE3Mzc5NzIwOTgyOTU0MDQ1.XwTDTw.-9q-p7vhMvDPm-t1h_KRIwGRC54";
+    private static String TOKEN;
 
     private static JDA jda;
     private static DBMngr dbMngr;
@@ -29,6 +29,7 @@ public class MaddoxBot {
     private static Logger logger;
 
     public static void main(String[] args) throws LoginException, InterruptedException {
+        new Credentials().loadCredentials();
         dbMngr = new DBMngr();
 
         JDABuilder jdaBuilder = JDABuilder.createDefault(TOKEN);
@@ -68,6 +69,10 @@ public class MaddoxBot {
 
         LeaderboardSchedule leaderboard = new LeaderboardSchedule();
         // leaderboard.startScheduler();
+    }
+
+    public static void setTOKEN(String TOKEN) {
+        MaddoxBot.TOKEN = TOKEN;
     }
 
     public static JDA getJda() {
